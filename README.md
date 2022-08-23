@@ -5,6 +5,15 @@ This repository contains datasets related to CPE in machine readable formats so 
 ## `repositories.yml`
 
 The list of CPE owned repositories.
+The best way to access this file via tooling is by using the following URL: `https://raw.githubusercontent.com/CircleCI-Public/cpe-datasets/main/repositories.yml`.
+You can also filter on the commandline with `yq`.
+For example, to list just actual image repos:
+
+```bash
+curl -sSL "https://raw.githubusercontent.com/CircleCI-Public/cpe-datasets/main/repositories.yml" | yq '.[] | select( .type == "image" )'
+```
+
+With a programming language such as Go or Python, this is even easier to use.
 
 Format:
 
