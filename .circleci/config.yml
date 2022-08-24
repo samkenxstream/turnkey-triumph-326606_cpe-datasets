@@ -10,4 +10,5 @@ jobs:
     docker:
       - image: cimg/base:current
     steps:
+      - checkout
       - run: cat repositories.yml | yq .
