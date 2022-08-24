@@ -1,0 +1,13 @@
+version: 2.1
+
+workflows:
+  main-wf:
+    jobs:
+      - test
+
+jobs:
+  test:
+    docker:
+      - image: cimg/base:current
+    steps:
+      - run: cat repositories.yml | yq .
