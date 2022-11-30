@@ -22,6 +22,7 @@ Format:
   team: "<teamname>"
   subteam: "<subteam>"
   type: "<type>"
+  account: "<account>"
 ```
 
 What keys mean::
@@ -34,4 +35,7 @@ What keys mean::
   - valid values: 'Images', 'Orbs'
 - `type`:
   - "What type of repository is it? This can be helpful for running automation on only certain repos. For example, a repository may be owned by the Images subteam but the repo itself doesn't represent an image."
-  - valid values: 'image', 'orb', 'tooling', 'docs'
+  - valid values: 'image', 'orb', 'tooling', 'docs', 'sample-project'
+- `account`:
+  - "Which CircleCI account does this live in?"
+  - valid values: 'CircleCI', 'CircleCI-Public'
